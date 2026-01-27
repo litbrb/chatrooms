@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ name }} Chatroom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <h1>{{ name }} Chatroom</h1>
+    {% for msg in content.split("\n") %}
+    <pre>{{msg}}</pre>
+    <hr>
+    {% endfor %}
+
+    <form action="/chatroom/{{ name }}" method="POST">
+        <input type="text" name="message">
+        <button type="submit" id="post">Post</button>
+    </form>
+</body>
+
+</html>

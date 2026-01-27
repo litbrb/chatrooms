@@ -1,0 +1,61 @@
+:root {
+    --light: #d2e4f5;
+    --dark: #11314f;
+}
+
+* {
+    font-family: Arial;
+}
+
+body {
+    background-color: var(--light);
+}
+
+h1 {
+    color: var(--dark);
+}
+
+#bar {
+    width: 98vw;
+    height: 1vh;
+    background: linear-gradient(var(--dark), var(--light));
+}
+
+#categories {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.category,#post {
+    cursor: pointer;
+    background-color: var(--dark);
+    color: var(--light);
+    border: 1px solid var(--dark);
+    padding: 0.5rem;
+    transition: 0.25s background-color, 0.25s color;
+}
+
+.category:hover,#post:hover {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.chatroom {
+    cursor: pointer;
+    border: 1px solid var(--dark);
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 0.5rem;
+    transition: 0.25s background-color, 0.25s color;
+}
+
+.chatroom:hover {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+#chatrooms {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
