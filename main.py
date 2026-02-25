@@ -20,4 +20,5 @@ def chatroom(name):
 
     return render_template("chatroom.html", name=name, content=content)
 
-app.run(debug=True)
+
+app.run(host="0.0.0.0")
